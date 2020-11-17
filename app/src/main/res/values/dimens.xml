@@ -1,0 +1,9 @@
+<resources>
+    <dimen name="item_album_title_padding">12dp</dimen>
+    <dimen name="item_medium_margin">8dp</dimen>
+    <dimen name="item_layout_padding">8dp</dimen>
+    <dimen name="item_min_height">100dp</dimen>
+    <dimen name="card_margin">8dp</dimen>
+    <dimen name="card_corner_radius">8dp</dimen>
+    <dimen name="card_corner_elevation">10dp</dimen>
+</resources>

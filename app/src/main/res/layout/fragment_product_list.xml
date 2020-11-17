@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="productListViewModel"
+            type="com.inoomene.check24products.viewmodel.ProductListViewModel" />
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ProductListFragment">
+
+    <TextView
+        android:id="@+id/headerTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@{productListViewModel.headerTitleLiveData}"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="@dimen/item_layout_padding"/>
+
+    <TextView
+        android:id="@+id/headerDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@{productListViewModel.headerDescriptionLiveData}"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerTitle"
+        android:paddingStart="@dimen/item_layout_padding"
+        android:paddingEnd="@dimen/item_layout_padding"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/productRecycleView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layoutManager="LinearLayoutManager"
+        android:layout_marginTop="@dimen/item_layout_padding"
+        app:layout_constraintTop_toBottomOf="@+id/headerDescription"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:context=".ui.fragments.UserListFragment"
+        tools:listitem="@layout/item_product" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
