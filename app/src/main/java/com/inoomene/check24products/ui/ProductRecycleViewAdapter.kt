@@ -73,7 +73,7 @@ class ProductRecycleViewAdapter : RecyclerView.Adapter<ProductRecycleViewAdapter
     class ReleasedProductViewHolder(private val binding: ItemProductReleasedBinding) : BaseViewHolder(binding.root) {
         override fun bind(item: Product) {
             productItemViewModel.bind(item)
-            binding.productItemViewModel = productItemViewModel
+            binding.productReleasedViewModel = productItemViewModel
         }
     }
 

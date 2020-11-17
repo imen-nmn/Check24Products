@@ -5,7 +5,7 @@
 
     <data>
         <variable
-            name="productItemViewModel"
+            name="productReleasedViewModel"
             type="com.inoomene.check24products.viewmodel.ProductItemViewModel" />
     </data>
 
@@ -30,7 +30,7 @@
                 android:layout_height="0dp"
                 android:minHeight="100dp"
                 android:layout_margin="@dimen/item_medium_margin"
-                app:imageUrl="@{productItemViewModel.productImageUrl}"
+                app:imageUrl="@{productReleasedViewModel.productImageUrl}"
                 app:layout_constraintDimensionRatio="1:1"
                 android:src="@drawable/ic_launcher"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -41,7 +41,7 @@
                 android:id="@+id/productName"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@{productItemViewModel.productName}"
+                android:text="@{productReleasedViewModel.productName}"
                 android:layout_marginStart="@dimen/item_medium_margin"
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/productImage"
@@ -51,7 +51,7 @@
                 android:id="@+id/productReleasedDate"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@{productItemViewModel.productReleaseDate}"
+                android:text="@{productReleasedViewModel.productReleaseDate}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -61,7 +61,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/item_medium_margin"
                 android:layout_marginStart="@dimen/item_medium_margin"
-                android:text="@{productItemViewModel.productDescription}"
+                android:text="@{productReleasedViewModel.productDescription}"
                 app:layout_constraintStart_toEndOf="@+id/productImage"
                 app:layout_constraintTop_toBottomOf="@+id/productName" />
 
@@ -69,9 +69,8 @@
                 android:id="@+id/productPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@{productItemViewModel.productPrice}"
+                android:text="@{productReleasedViewModel.productPrice}"
                 app:layout_constraintStart_toStartOf="@id/productReleasedDescription"
-                app:layout_constraintEnd_toEndOf="@+id/productRating"
                 app:layout_constraintTop_toBottomOf="@+id/productReleasedDescription"/>
 
             <RatingBar
@@ -81,7 +80,7 @@
                 style="?android:attr/ratingBarStyleSmall"
                 android:numStars="5"
                 android:stepSize="1.0"
-                android:rating="@{productItemViewModel.productRating}"
+                android:rating="@{productReleasedViewModel.productRating}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/productReleasedDescription"/>
 
